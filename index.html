@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner img, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:img" content="static/img/your_banner_img.png" />
+  <meta property="og:img:width" content="1200"/>
+  <meta property="og:img:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner img, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:img" content="static/imgs/your_twitter_banner_img.png">
+  <meta name="twitter:card" content="summary_large_img">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>FlowAVSE</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- <h1 class="xtitle is-1 publication-title" style="font-size: 31px;"><strong>FlowAVSE</strong></h1><br> -->
+            <h1 class="xtitle is-1 publication-title" style="font-size: 45px;">InfiniteAudio: INFINITE-LENGTH AUDIO GENERATION WITH CONSISTENT ACOUSTIC CHARACTERISTICS</h1>
+            <div class="is-size-5 publication-authors">
+            </div>
+            <br>
+            <!-- Institution & Conference -->
+            <div class="is-size-5 publication-authors">
+              <span class="author-block" style="font-size: 20px;">Anonymous<sup>*</sup></span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block" style="font-size: 24px;">Under review</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light" style='background-color: white'>
+  <div class="container is-max-desktop" >
+    <div class="columns is-centered has-text-centered" >
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The goal of this paper is to generate infinite-length audio while maintaining acoustic consistency by leveraging existing text-conditional audio generation models through diffusion approaches. Current diffusion models require significant memory overhead when handling long audio sequences due to their non-autoregressive nature. Although longer audio can be produced by concatenating short clips, ensuring acoustic consistency across clips is challenging, as text conditions do not account for temporal aspects. 
+            To address this, we propose InfiniteAudio, a novel inference technique that generates high-quality, long audio with consistent acoustics throughout. Our technique is built on three key components. 
+            
+            First, we employ curved denoising, which uses latent inputs with varying diffusion timesteps. By selecting only critical timesteps, we reduce the total number of diffusion steps while preserving audio quality. Second, we introduce a conditional guidance alternation technique to address memory limitations when processing long text prompts, enabling the generation of extended speech sequences with improved accuracy. Lastly, to ensure consistent audio generation, we share query, key, and value pairs within the diffusion self-attention module, contributing to the preservation of audio characteristics throughout. 
+            
+            We demonstrate the effectiveness of our method using existing text-to-audio generation baselines. Generated audio samples are available on our anonymous project page.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
