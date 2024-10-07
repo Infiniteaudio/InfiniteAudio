@@ -24,7 +24,7 @@
 
          .title {
             text-align: center;               /* Center align title text */
-            font-size: 2.2em;                 /* Font size for the title */
+            font-size: 1.8em;                 /* Font size for the title */
             margin: 20px 0;                   /* Margin around title */
             color: #333;                       /* Dark text color */
         }
@@ -42,7 +42,7 @@
 
          .highlight-title {
             text-align: center;               /* Center align title text */
-            font-size: 2.2em; 
+            font-size: 1.8em; 
             color: #333;                      /* Dark text color */
         }
 
@@ -88,6 +88,56 @@
         <h2 style="text-align:center;"><b>Abstract</b></h2>This work aims to generate long-duration audio while preserving acoustic coherence, utilizing existing text-conditional audio generation models through diffusion-based approaches. Current diffusion models, however, encounter significant challenges in generating long audio sequences due to memory constraints, as output size scales with input length. While one possible solution is to concatenate short clips, this often leads to inconsistencies due to a lack of shared temporal information across segments.
         To address these challenges, we propose InfiniteAudio, a novel inference technique designed to generate long audio with consistent acoustic attributes. Our method is based on three key components. First, we implement a curved denoising approach with a fixed-size input, enabling theoretically infinite audio generation while maintaining a constant memory footprint. Second, we introduce conditional guidance alternation, a mechanism that enhances intelligibility in long speech generation. Finally, initial self-attention features are shared across future frames to maintain temporal coherence.
         The effectiveness of InfiniteAudio is demonstrated through comprehensive comparisons with existing text-to-audio generation baselines. </p>
+    </div>
+
+    <div class="content">
+      <h2 style="text-align:center;"><b>Table of contents</b></h2>
+      <div class="toc-grid">
+        <div><a href="#A">A. TTA w/ AudioLDM + InfiniteAudio</a></div>  
+        <div><a href="#D">D. TTA w/ VoiceLDM + InfiniteAudio</a></div>
+        <div><a href="#B">B. TTLS w/ VoiceLDM + InfiniteAudio</a></div>
+        <div><a href="#E">E. TTAS w/ VoiceLDM + InfiniteAudio</a></div>
+        <div><a href="#C">C. Ablation Study</a></div>
+      </div>
+
+    </div>
+
+    <div class="content">
+      <h2 id="A"><b>A. TTA w/ AudioLDM + InfiniteAudio (Long generation)</b></h2>
+
+      <div class="t">
+        <ul>
+          <li>AudioLDM (20s)
+            <div class="center-video">
+              <video width="384" height="240" controls> <source src="./utils/fifo-diffusion/videocrafter2_vdm/A vibrant underwater scene of a scuba diver exploring a shipwreck, 2K, photorealistic..mp4" type="video/mp4"></video>
+            </div>
+          </li>
+          <li>InfiniteAudio (1m)
+            <div class="center-video">
+              <video width="384" height="240" controls> <source src="./utils/fifo-diffusion/videocrafter2_512/A vibrant underwater scene of a scuba diver exploring a shipwreck, 2K, photorealistic..mp4" type="video/mp4"></video>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <br>
+      <p style="text-align: center; font-size: 18px"> <b>Description prompt.</b></p>
+      
+      <div class="t">
+        <ul>
+          <li>AudioLDM (20s)
+            <div class="center-video">
+              <video width="384" height="240" controls> <source src="./utils/fifo-diffusion/videocrafter2_vdm/A dark knight riding on a black horse on the glassland,  photorealistic, 4k, high definition..mp4" type="video/mp4"></video>
+            </div>
+          </li>
+          <li>InfiniteAudio (1m)
+            <div class="center-video">
+              <video width="384" height="240" controls> <source src="./utils/fifo-diffusion/videocrafter2_512/A dark knight riding on a black horse on the glassland,  photorealistic, 4k, high definition..mp4" type="video/mp4"></video>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <br>
+      <p style="text-align: center; font-size: 18px"> <b>A dark knight riding on a black horse on the glassland,  photorealistic, 4k, high definition.</b></p>
     </div>
 </body>
 
