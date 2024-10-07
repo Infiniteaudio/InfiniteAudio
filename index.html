@@ -20,8 +20,12 @@
         }
 
         .content {
-            width: 100%;
-            max-width: 800px; /* Set max width for content */
+            border: 2px solid #ddd;           /* Light gray border around the content */
+            border-radius: 8px;               /* Rounded corners for the box */
+            padding: 20px;                    /* Inner spacing to give breathing room */
+            margin: 20px 0;                   /* Space between boxes and other elements */
+            background-color: #f9f9f9;        /* Light background color for contrast */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
         }
     </style>
 
@@ -29,52 +33,33 @@
 </head>
 
 <body>
-    <!-- Main container to center content -->
-    <div class="container is-flex is-justify-content-center is-align-items-center" style="min-height: 100vh; flex-direction: column; text-align: center;">
-
-        <div class="content">
-            <h1><strong>InfiniteAudio: INFINITE-LENGTH AUDIO GENERATION <br>WITH CONSISTENT ACOUSTIC ATTRIBUTES</strong></h1>
-            <p style="text-align: center; font-weight: bold; font-size: 1.6em">Under Review</p>
-        </div>
-
-        <div class="content">
-          <h2><b>1K-frame Long Videos (512 x 320 resolution, VideoCrafter2) </b></h2>
-          <div id="carousel" class="carousel carousel-vid" style="overflow: hidden; margin-top: 0px; font-weight: bold; font-size: 1.2em">
+    <div class="content">
+        <h2><b>1K-frame Long Videos (512 x 320 resolution, VideoCrafter2) </b></h2>
+        <div id="carousel" class="carousel carousel-vid" style="overflow: hidden; margin-top: 0px; font-weight: bold; font-size: 1.2em">
             <div class="vid-txt">
-              <p>An astronaut floating in space, high quality, 4K resolution.</p>
-              <video autoplay muted loop playsinline controls dth="512px">
-                <source src="./utils/fifo-diffusion/videocrafter2_1024/astronaut_floating.mp4" type="video/mp4">
-              </video>
+                <p>An astronaut floating in space, high quality, 4K resolution.</p>
+                <video autoplay muted loop playsinline controls width="512px">
+                    <source src="./utils/fifo-diffusion/videocrafter2_1024/astronaut_floating.mp4" type="video/mp4">
+                </video>
             </div>
             <div class="vid-txt">
-              <p>A spectacular fireworks display over Sydney Harbour, 4K, high resolution.</p>
-              <video autoplay muted loop playsinline controls dth="512px">
-                <source src="./utils/fifo-diffusion/videocrafter2_1024/firework.mp4" type="video/mp4">
-              </video>
+                <p>A spectacular fireworks display over Sydney Harbour, 4K, high resolution.</p>
+                <video autoplay muted loop playsinline controls width="512px">
+                    <source src="./utils/fifo-diffusion/videocrafter2_1024/firework.mp4" type="video/mp4">
+                </video>
             </div>
             <div class="vid-txt">
-              <p>A colony of penguins waddling on an Antarctic ice sheet, 4K, ultra HD.</p>
-              <video autoplay muted loop playsinline controls dth="512px">
-                <source src="./utils/fifo-diffusion/videocrafter2_1024/penguins.mp4" type="video/mp4">
-              </video>
+                <p>A colony of penguins waddling on an Antarctic ice sheet, 4K, ultra HD.</p>
+                <video autoplay muted loop playsinline controls width="512px">
+                    <source src="./utils/fifo-diffusion/videocrafter2_1024/penguins.mp4" type="video/mp4">
+                </video>
             </div>
-          </div>
-
-
-            
         </div>
-        
-        <div class="content">
-          <h2 style="text-align:center;"><b>Abstract</b></h2>
-          <p>We propose a novel inference technique based on a pretrained diffusion model for text-conditional video generation.
-            Our approach, called <b>FIFO-Diffusion</b>, is conceptually capable of generating infinitely long videos without training.
-            This is achieved by iteratively performing diagonal denoising, which concurrently processes a series of consecutive frames with increasing noise levels in a queue; our method dequeues a fully denoised frame at the head while enqueuing a new random noise frame at the tail.
-            However, diagonal denoising is a double-edged sword as the frames near the tail can take advantage of cleaner ones by forward reference but such a strategy induces the discrepancy between training and inference.
-            Hence, we introduce latent partitioning to reduce the training-inference gap and lookahead denoising to leverage the benefit of forward referencing.
-            We have demonstrated the promising results and effectiveness of the proposed methods on strong text-to-video generation baselines.
-          </p>
-        </div>
-
+    </div>
+    
+    <div class="content">
+        <h2 style="text-align:center;"><b>Abstract</b></h2>
+        <p>We propose a novel inference technique based on a pretrained diffusion model for text-conditional video generation. Our approach, called <b>FIFO-Diffusion</b>, is conceptually capable of generating infinitely long videos without training. This is achieved by iteratively performing diagonal denoising, which concurrently processes a series of consecutive frames with increasing noise levels in a queue; our method dequeues a fully denoised frame at the head while enqueuing a new random noise frame at the tail. However, diagonal denoising is a double-edged sword as the frames near the tail can take advantage of cleaner ones by forward reference but such a strategy induces the discrepancy between training and inference. Hence, we introduce latent partitioning to reduce the training-inference gap and lookahead denoising to leverage the benefit of forward referencing. We have demonstrated the promising results and effectiveness of the proposed methods on strong text-to-video generation baselines.</p>
     </div>
 </body>
 
