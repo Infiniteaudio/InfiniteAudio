@@ -11,22 +11,24 @@
     <style>
         /* Custom CSS for centering */
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            text-align: center;
-            margin: 0;
+            display: flex;                   /* Enable Flexbox layout */
+            flex-direction: column;          /* Stack children vertically */
+            align-items: center;             /* Center children horizontally */
+            justify-content: center;         /* Center children vertically */
+            min-height: 100vh;               /* Take full height of the viewport */
+            margin: 0;                       /* Remove default margin */
+            background-color: #f0f0f0;      /* Light background color */
         }
 
+        /* Styles for individual content boxes */
         .content {
             max-width: 800px;                /* Maximum width for the content box */
             border: 2px solid #ddd;          /* Light gray border around the content */
             border-radius: 8px;              /* Rounded corners for the box */
-            padding: 20px;                   /* Inner spacing to give breathing room */
-            margin: 20px auto;               /* Center the box and space between boxes */
-            background-color: #f9f9f9;       /* Light background color for contrast */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            padding: 20px;                   /* Inner spacing */
+            margin: 20px 0;                  /* Space between boxes */
+            background-color: #fff;          /* White background color */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
         }
     </style>
 
