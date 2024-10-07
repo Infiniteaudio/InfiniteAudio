@@ -50,6 +50,47 @@
         .vid-txt p {
             text-align: center;               /* Center text in video description */
         }
+
+        .toc-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+            font-size: 18px;
+          }
+        
+          .toc-list li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+          }
+        
+          .toc-list li:hover {
+            background-color: #e0e0e0;
+          }
+        
+          .toc-list a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+          }
+        
+          .toc-list a:hover {
+            color: #007bff;
+          }
+        
+          h2 {
+            font-family: 'Arial', sans-serif;
+            margin-bottom: 20px;
+            font-size: 24px;
+          }
+        
+          @media (max-width: 768px) {
+            .toc-list {
+              font-size: 16px;
+            }
+          }
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -79,16 +120,17 @@
     </div>
 
     <div class="content">
-      <h2 style="text-align:center;"><b>Table of contents</b></h2>
-      <div class="toc-grid">
-        <div><a href="#A">A. TTA w/ AudioLDM + InfiniteAudio</a></div>  
-        <div><a href="#D">D. TTA w/ VoiceLDM + InfiniteAudio</a></div>
-        <div><a href="#B">B. TTLS w/ VoiceLDM + InfiniteAudio</a></div>
-        <div><a href="#E">E. TTAS w/ VoiceLDM + InfiniteAudio</a></div>
-        <div><a href="#C">C. Ablation Study</a></div>
-      </div>
-
+      <h2 style="text-align:center;"><b>Table of Contents</b></h2>
+      <ul class="toc-list">
+        <li><a href="#A">A. TTA w/ AudioLDM + InfiniteAudio</a></li>
+        <li><a href="#B">B. TTLS w/ VoiceLDM + InfiniteAudio</a></li>
+        <li><a href="#C">C. Ablation Study</a></li>
+        <li><a href="#D">D. TTA w/ VoiceLDM + InfiniteAudio</a></li>
+        <li><a href="#E">E. TTAS w/ VoiceLDM + InfiniteAudio</a></li>
+      </ul>
     </div>
+
+
 
     <div class="content">
       <h2 id="A"><b>A. TTA w/ AudioLDM + InfiniteAudio (Long generation)</b></h2>
