@@ -127,6 +127,18 @@
             justify-content: center; /* Center the audio player horizontally */
             margin-top: 10px; /* Space between text and audio */
           }
+
+         .center-spectrogram {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .spectrogram-img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+        }
         
           h2 {
             font-family: 'Arial', sans-serif;
@@ -188,19 +200,25 @@
           <li>
             <span>AudioLDM (20s)</span>
             <div class="center-audio">
-              <audio controls>
-                <source src="./utils/fifo-diffusion/videocrafter2_vdm/A vibrant underwater scene of a scuba diver exploring a shipwreck, 2K, photorealistic..mp3" type="audio/mp3">
-                Your browser does not support the audio element.
-              </audio>
+                <audio controls>
+                    <source src="./utils/fifo-diffusion/videocrafter2_vdm/A vibrant underwater scene of a scuba diver exploring a shipwreck, 2K, photorealistic..mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
             </div>
-          </li>
-          <li>
+            <div class="center-spectrogram">
+                <img src="./path_to_your_spectrogram_image1.png" alt="Spectrogram for AudioLDM" class="spectrogram-img">
+            </div>
+        </li>
+        <li>
             <span>InfiniteAudio (1m)</span>
             <div class="center-audio">
-              <audio controls>
-                <source src="./utils/fifo-diffusion/videocrafter2_512/A vibrant underwater scene of a scuba diver exploring a shipwreck, 2K, photorealistic..mp3" type="audio/mp3">
-                Your browser does not support the audio element.
-              </audio>
+                <audio controls>
+                    <source src="./utils/fifo-diffusion/videocrafter2_512/A vibrant underwater scene of a scuba diver exploring a shipwreck, 2K, photorealistic..mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="center-spectrogram">
+                <img src="./path_to_your_spectrogram_image2.png" alt="Spectrogram for InfiniteAudio" class="spectrogram-img">
             </div>
           </li>
         </ul>
