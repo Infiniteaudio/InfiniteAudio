@@ -262,56 +262,69 @@
     <div class="content">
       <h2 id="B"><b>B. TTA w/ VoiceLDM + InfiniteAudio</b></h2>
 
-      <div class="t">
+       <div class="t">
+        <p style="text-align: left; font-size: 20px"; font-weight: bold;><b>     Description prompt: "Birds chirping"</b></p>
         <ul class="audio-list">
           <li>
-            <span>AudioLDM (20s)</span>
-            <div class="center-audio">
-              <audio controls>
-                <source src="./utils/fifo-diffusion/videocrafter2_vdm/A vibrant underwater scene of a scuba diver exploring a shipwreck, 2K, photorealistic..mp3" type="audio/mp3">
-                Your browser does not support the audio element.
-              </audio>
+            <span>VoiceLDM (10s)</span>
+            <div class="center-spectrogram">
+                <img src="./TTA_voiceldm/bird_voice.png" alt="Spectrogram for VoiceLDM" class="spectrogram-img">
             </div>
-          </li>
-          <li>
-            <span>InfiniteAudio (1m)</span>
             <div class="center-audio">
-              <audio controls>
-                <source src="./utils/fifo-diffusion/videocrafter2_512/A vibrant underwater scene of a scuba diver exploring a shipwreck, 2K, photorealistic..mp3" type="audio/mp3">
-                Your browser does not support the audio element.
-              </audio>
+                <audio controls>
+                    <source src="./TTA_voiceldm/bird_voice.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            
+        </li>
+        <li>
+            <span>InfiniteAudio (2m)</span>
+            <div class="center-spectrogram">
+                <img src="./TTA_voiceldm/infinite_bird.png" alt="Spectrogram for InfiniteAudio" class="spectrogram-img">
+            </div>
+            <div class="center-audio">
+                <audio controls>
+                    <source src="./TTA_voiceldm/infinite_bird.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
             </div>
           </li>
         </ul>
       </div>
       <br>
-      <p style="text-align: center; font-size: 18px"><b>Description prompt.</b></p>
       <div class="t">
+        <p style="text-align: left; font-size: 20px"; font-weight: bold;><b>     Description prompt: "A violin playing a heartfelt melody."</b></p>
         <ul class="audio-list">
           <li>
-            <span>AudioLDM (20s)</span>
-            <div class="center-audio">
-              <audio controls>
-                <source src="./utils/fifo-diffusion/videocrafter2_vdm/A vibrant underwater scene of a scuba diver exploring a shipwreck, 2K, photorealistic..mp3" type="audio/mp3">
-                Your browser does not support the audio element.
-              </audio>
+            <span>VoiceLDM (10s)</span>
+            <div class="center-spectrogram">
+                <img src="./TTA_voiceldm/violin_voice.png" alt="Spectrogram for VoiceLDM" class="spectrogram-img">
             </div>
-          </li>
-          <li>
-            <span>InfiniteAudio (1m)</span>
             <div class="center-audio">
-              <audio controls>
-                <source src="./utils/fifo-diffusion/videocrafter2_512/A vibrant underwater scene of a scuba diver exploring a shipwreck, 2K, photorealistic..mp3" type="audio/mp3">
-                Your browser does not support the audio element.
-              </audio>
+                <audio controls>
+                    <source src="./TTA_voiceldm/violin_voice.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </li>
+        <li>
+            <span>InfiniteAudio (2m)</span>
+            <div class="center-spectrogram">
+                <img src="./TTA_voiceldm/infinite_violin.png" alt="Spectrogram for InfiniteAudio" class="spectrogram-img">
+            </div>
+            <div class="center-audio">
+                <audio controls>
+                    <source src="./TTA_voiceldm/infinite_violin.wav" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
             </div>
           </li>
         </ul>
       </div>
       <br>
-      <p style="text-align: center; font-size: 18px"><b>Description prompt.</b></p>
+      
     </div>
-
 
     <div class="content">
       <h2 id="C"><b>C. TTLS w/ VoiceLDM + InfiniteAudio</b></h2>
