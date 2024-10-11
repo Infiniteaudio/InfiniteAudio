@@ -352,7 +352,7 @@ as nothing more than we are now. Can you tell me where I might find platform Nin
       </div>
       <br>
         <div class="t">
-        <p style="text-align: left; font-size: 20px"; font-weight: bold;><b>     Description prompt: "A man is speaking in a cathedral." <br>     Content prompt: "Dobby has no master. Dobby is a free elf! And Dobby has come to save Harry Potter and his friends. It takes a great deal of Bravery to stand up to your Enemies, but a great deal more to stand up to your Friends."</b></p>
+        
         <ul class="audio-list">
           <li>
             <span>VoiceLDM (10s)</span>
@@ -382,6 +382,7 @@ as nothing more than we are now. Can you tell me where I might find platform Nin
         </ul>
       </div>
       <br>
+      <p style="text-align: left; font-size: 20px"; font-weight: bold;><b>     Description prompt: "A man is speaking in a cathedral." <br>     Content prompt: "Dobby has no master. Dobby is a free elf! And Dobby has come to save Harry Potter and his friends. It takes a great deal of Bravery to stand up to your Enemies, but a great deal more to stand up to your Friends."</b></p>
     
       
     </div>
@@ -395,7 +396,7 @@ as nothing more than we are now. Can you tell me where I might find platform Nin
     <h2 id="C"><b>C. Ablation Study</b></h2>
     <div class="ablation-box" style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
       <h3>Strategies on selecting sampling steps.</h3>
-      <p style="text-align: center; font-size: 18px"><b>     Description prompt: "A violin playing a heartfelt melody."</b></p>
+      
       <div class="t">
     
         <ul class="audio-list">
@@ -451,6 +452,7 @@ as nothing more than we are now. Can you tell me where I might find platform Nin
       </div>
 
     <br>
+    <p style="text-align: center; font-size: 18px"><b>     Description prompt: "A violin playing a heartfelt melody."</b></p>
     </div>
     
 
@@ -499,65 +501,6 @@ as nothing more than we are now. Can you tell me where I might find platform Nin
       </div>
     <br>
     <p style="text-align: center; font-size: 18px"><b>     Description prompt: "She is talking in a park."<br>     Content prompt: "Dobby has no master. Dobby is a free elf! And Dobby has come to save Harry Potter and his friends. Every great wizard in history has started out as nothing more than we are now."</b></p>
-    </div>
-
-    <div class="ablation-box" style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
-      <h3>Ablation Study 3</h3>
-      <div class="t">
-    
-        <ul class="audio-list">
-          <li>
-            <span>InfiniteAudio w/ equal timesteps.</span>
-            <div class="center-spectrogram">
-                <img src="./fifo_abl/abl_equal.png" alt="Spectrogram of equal timesteps">
-              </div>
-            <div class="center-audio">
-              <audio controls>
-                <source src="./fifo_abl/fifo_violin.wav" type="audio/wav">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-          </li>
-          <li>
-            <span>InfiniteAudio w/ middle focused timesteps.</span>
-            <div class="center-spectrogram">
-                <img src="./fifo_abl/abl_middle.png" alt="Spectrogram of InfiniteAudio">
-            </div>
-            <div class="center-audio">
-              <audio controls>
-                <source src="./fifo_abl/middle_violin" type="audio/wav">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-          </li>
-          <li>
-            <span>InfiniteAudio w/ last focused timesteps.</span>
-              <div class="center-spectrogram">
-                <img src="./fifo_abl/abl_init.png" alt="Spectrogram of infiniteaudio">
-              </div>
-              <div class="center-audio">
-                  <audio controls>
-                    <source src="./fifo_abl/violin_initskip.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                  </audio>
-              </div>
-          </li>
-          <li>
-            <span>InfiniteAudio w/ initial focused timesteps.</span>
-            <div class="center-spectrogram">
-                <img src="./fifo_abl/abl_infinite.png" alt="Spectrogram of InfiniteAudio">
-            </div>
-            <div class="center-audio">
-              <audio controls>
-                <source src="./fifo_abl/violin_lastskip.wav" type="audio/wav">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-          </li>
-        </ul>
-      </div>
-    <br>
-    <p style="text-align: center; font-size: 18px"><b>     Description prompt: "A violin playing a heartfelt melody."</b></p>
     </div>
         
 
