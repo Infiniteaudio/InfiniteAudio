@@ -455,62 +455,50 @@ as nothing more than we are now. Can you tell me where I might find platform Nin
     
 
     <div class="ablation-box" style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
-      <h3>Ablation Study 2</h3>
+      <h3>Ablation Study on content prompt separation and QKV sharing.</h3>
       <div class="t">
     
         <ul class="audio-list">
           <li>
-            <span>InfiniteAudio w/ equal timesteps.</span>
+            <span>InfiniteAudio</span>
             <div class="center-spectrogram">
-                <img src="./fifo_abl/abl_equal.png" alt="Spectrogram of equal timesteps">
+                <img src="./abl2/att.png" alt="Spectrogram of audio">
               </div>
             <div class="center-audio">
               <audio controls>
-                <source src="./fifo_abl/fifo_violin.wav" type="audio/wav">
+                <source src="./abl2/att.wav" type="audio/wav">
                 Your browser does not support the audio element.
               </audio>
             </div>
           </li>
           <li>
-            <span>InfiniteAudio w/ middle focused timesteps.</span>
+            <span>InfiniteAudio w/o prompt separation.</span>
             <div class="center-spectrogram">
-                <img src="./fifo_abl/abl_middle.png" alt="Spectrogram of InfiniteAudio">
+                <img src="./abl2/nosep.png" alt="Spectrogram of audio">
             </div>
             <div class="center-audio">
               <audio controls>
-                <source src="./fifo_abl/middle_violin" type="audio/wav">
+                <source src="./abl2/nosep.wav" type="audio/wav">
                 Your browser does not support the audio element.
               </audio>
             </div>
           </li>
           <li>
-            <span>InfiniteAudio w/ last focused timesteps.</span>
+            <span>InfiniteAudio w/o QKV sharing.</span>
               <div class="center-spectrogram">
-                <img src="./fifo_abl/abl_init.png" alt="Spectrogram of infiniteaudio">
+                <img src="./abl2/no_att.png" alt="Spectrogram of audio">
               </div>
               <div class="center-audio">
                   <audio controls>
-                    <source src="./fifo_abl/violin_initskip.wav" type="audio/wav">
+                    <source src="./abl2/no_att.wav" type="audio/wav">
                     Your browser does not support the audio element.
                   </audio>
               </div>
           </li>
-          <li>
-            <span>InfiniteAudio w/ initial focused timesteps.</span>
-            <div class="center-spectrogram">
-                <img src="./fifo_abl/abl_infinite.png" alt="Spectrogram of InfiniteAudio">
-            </div>
-            <div class="center-audio">
-              <audio controls>
-                <source src="./fifo_abl/violin_lastskip.wav" type="audio/wav">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-          </li>
         </ul>
       </div>
     <br>
-    <p style="text-align: center; font-size: 18px"><b>     Description prompt: "A violin playing a heartfelt melody."</b></p>
+    <p style="text-align: center; font-size: 18px"><b>     Description prompt: "She is talking in a park."<br>     Content prompt: "Dobby has no master. Dobby is a free elf! And Dobby has come to save Harry Potter and his friends. Every great wizard in history has started out as nothing more than we are now."</b></p>
     </div>
 
     <div class="ablation-box" style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
