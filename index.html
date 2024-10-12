@@ -524,7 +524,7 @@
     </div>
     
     <div class="ablation-box" style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
-      <h3>Ablation Study on content separation (Guidance alternation) and QKV sharing</h3>
+      <h3>Ablation Study on content separation, guidance alternation and QKV sharing</h3>
       <div class="t">
     
         <ul class="audio-list">
@@ -542,6 +542,18 @@
           </li>
           <li>
             <span>InfiniteAudio w/o content separation.</span>
+            <div class="center-spectrogram">
+                <img src="./abl2/nosep.png" alt="Spectrogram of audio">
+            </div>
+            <div class="center-audio">
+              <audio controls>
+                <source src="./abl2/nosep.wav" type="audio/wav">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </li>
+          <li>
+            <span>InfiniteAudio w/o guidance alternation.</span>
             <div class="center-spectrogram">
                 <img src="./abl2/nosep.png" alt="Spectrogram of audio">
             </div>
