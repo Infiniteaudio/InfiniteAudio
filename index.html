@@ -159,7 +159,7 @@
 
 <body>
      <div class="title">
-            <h1 class="highlight-title"><strong>InfiniteAudio:</strong> Infinite-length Audio Generation <br> with Consistent Acoustic Attributes</h1>
+            <h1 class="highlight-title"><strong>InfiniteAudio:</strong> Infinite-length Audio Generation with Consistency</h1>
             <p style="font-weight: bold; text-align:center; font-size: 1.2em">Under Review</p>
     </div>
     <div class="content">
@@ -174,17 +174,15 @@
     </div>
     
     <div class="content">
-        <h2 style="text-align:center;"><b>Abstract</b></h2>This work aims to generate long-duration audio while preserving acoustic coherence, utilizing existing text-conditional audio generation models through diffusion-based approaches. Current diffusion models, however, encounter significant challenges in generating long audio sequences due to memory constraints, as output size scales with input length. While one possible solution is to concatenate short clips, this often leads to inconsistencies due to a lack of shared temporal information across segments.
-        To address these challenges, we propose InfiniteAudio, a novel inference technique designed to generate long audio with consistent acoustic attributes. Our method is based on three key components. First, we implement a curved denoising approach with a fixed-size input, enabling theoretically infinite audio generation while maintaining a constant memory footprint. Second, we introduce conditional guidance alternation, a mechanism that enhances intelligibility in long speech generation. Finally, initial self-attention features are shared across future frames to maintain temporal coherence.
-        The effectiveness of InfiniteAudio is demonstrated through comprehensive comparisons with existing text-to-audio generation baselines. </p>
+        <h2 style="text-align:center;"><b>Abstract</b></h2>This paper presents InfiniteAudio, a simple yet effective strategy for generating infinite-length audio using diffusion-based text-to-audio methods. Current approaches face memory constraints because the output size increases with input length, making long duration generation challenging. A common workaround is to concatenate short audio segments, but this often leads to inconsistencies due to the lack of shared temporal context. To address this, InfiniteAudio integrates seamlessly into existing pipelines without additional training. It introduces two key techniques: FIFO sampling, a first-in, first-out inference strategy with fixed-size inputs, and curved denoising, which selectively prioritizes key diffusion steps for efficiency. Experiments show that InfiniteAudio achieves comparable or superior performance across all metrics.</p>
     </div>
 
      <div class="content">
       <h2 style="text-align: center; font-size: 24px; font-weight: bold;">Note</h2>
       <p style="font-size: 18px; line-height: 1.6;">
-        &bull; InfiniteAudio generates text-conditional sound effects, human speech, or a combination of both.<br>
+        &bull; InfiniteAudio generates text-conditional sound effects.<br>
         &bull; All audio samples are produced on a single 12GB GPU without any additional training.<br>
-        &bull; InfiniteAudio allows for extended audio and speech generation while maintaining a fixed memory footprint.
+        &bull; InfiniteAudio allows for extended audio generation while maintaining a fixed memory footprint.
       </p>
     </div>
 
@@ -378,87 +376,8 @@
       <p style="text-align: center; font-size: 20px; font-weight: bold; color: navy;">
         <b>Description:</b> <span style="color: black;">"Birds chirping."</span>
       </p>
-      <div class="t">
-        <ul class="audio-list">
-          <li>
-            <span>VoiceLDM (10s)</span>
-            <div class="center-spectrogram">
-                <img src="./TTAS/TTAS_voice_park.png" alt="Spectrogram for VoiceLDM" class="spectrogram-img">
-            </div>
-            <div class="center-audio">
-                <audio controls>
-                    <source src="./TTAS/TTAS_voice_park.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        </li>
-        <li>
-            <span>InfiniteAudio</span>
-            <div class="center-spectrogram">
-                <img src="./TTAS/TTAS_infinite_park.png" alt="Spectrogram for InfiniteAudio" class="spectrogram-img">
-            </div>
-            <div class="center-audio">
-                <audio controls>
-                    <source src="./TTAS/TTAS_infinite_park.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <br>
       
-    <!-- Description -->
-    <p style="text-align: center; font-size: 20px; font-weight: bold; color: navy;">
-      <b>Description:</b> <span style="color: black;">"</span> <span style="color: red;">She</span> <span style="color: black;"> is talking</span> <span style="color: red;"> in a park.</span> <span style="color: black;">"</span>
-    </p>
-    
-    <!-- Content -->
-    <p style="text-align: center; font-size: 20px; font-weight: bold; color: navy;">
-      <b>Content:</b> <span style="color: black;">"Dobby has no master. Dobby is a free elf! And Dobby has come to save Harry Potter and his friends. Every great wizard in history has started out as nothing more than we are now. Can you tell me where I might find platform Nine and Three-Quarters?"</span>
-    </p>
-        <div class="t">
-        
-        <ul class="audio-list">
-          <li>
-            <span>VoiceLDM (10s)</span>
-            <div class="center-spectrogram">
-                <img src="./TTAS/TTAS_voice_cathe.png" alt="Spectrogram for VoiceLDM" class="spectrogram-img">
-            </div>
-            <div class="center-audio">
-                <audio controls>
-                    <source src="./TTAS/TTAS_voice_cathe.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-            
-        </li>
-        <li>
-            <span>InfiniteAudio</span>
-            <div class="center-spectrogram">
-                <img src="./TTAS/TTAS_infinite_cathe.png" alt="Spectrogram for InfiniteAudio" class="spectrogram-img">
-            </div>
-            <div class="center-audio">
-                <audio controls>
-                    <source src="./TTAS/TTAS_infinite_cathe.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-          </li>
-        </ul>
-      </div>
       <br>
-   
-    <!-- Description -->
-    <p style="text-align: center; font-size: 20px; font-weight: bold; color: navy;">
-      <b>Description:</b> <span style="color: black;">"A man is speaking in a cathedral."</span>
-    </p>
-    
-    <!-- Content -->
-    <p style="text-align: center; font-size: 20px; font-weight: bold; color: navy;">
-      <b>Content:</b> <span style="color: black;">"It does not do to dwell on dreams and forget to live. It is not our abilities that show what we truly are. Do not pity the dead, pity the living and above all those who live without love. It takes a great deal of Bravery to stand up to your Enemies, but a great deal more to stand up to your Friends."</span>
-    </p>
-    </div>
 
 
 
@@ -532,72 +451,7 @@
     </p>
     </div>
     
-    <div class="ablation-box" style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
-      <h3>Ablation Study on content separation, guidance alternation and QKV sharing</h3>
-      <div class="t">
     
-        <ul class="audio-list">
-          <li>
-            <span>InfiniteAudio</span>
-            <div class="center-spectrogram">
-                <img src="./abl2/att.png" alt="Spectrogram of audio">
-              </div>
-            <div class="center-audio">
-              <audio controls>
-                <source src="./abl2/att.wav" type="audio/wav">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-          </li>
-          <li>
-            <span>InfiniteAudio w/o content separation.</span>
-            <div class="center-spectrogram">
-                <img src="./abl2/nosep.png" alt="Spectrogram of audio">
-            </div>
-            <div class="center-audio">
-              <audio controls>
-                <source src="./abl2/nosep.wav" type="audio/wav">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-          </li>
-          
-          <li>
-            <span>InfiniteAudio w/o QKV sharing.</span>
-              <div class="center-spectrogram">
-                <img src="./abl2/no_att.png" alt="Spectrogram of audio">
-              </div>
-              <div class="center-audio">
-                  <audio controls>
-                    <source src="./abl2/no_att.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                  </audio>
-              </div>
-          </li>
-          <li>
-            <span>InfiniteAudio w/o QKV sharing and guidance alternation.</span>
-            <div class="center-spectrogram">
-                <img src="./abl2/abl_guid.png" alt="Spectrogram of audio">
-            </div>
-            <div class="center-audio">
-              <audio controls>
-                <source src="./abl2/abl_guid.wav" type="audio/wav">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-          </li>
-        </ul>
-      </div>
-    <br>
-    <!-- Description -->
-    <p style="text-align: center; font-size: 20px; font-weight: bold; color: navy;">
-      <b>Description:</b> <span style="color: black;">"</span> <span style="color: red;">She</span> <span style="color: black;"> is talking in a park."</span>
-    </p>
-    
-    <!-- Content -->
-    <p style="text-align: center; font-size: 20px; font-weight: bold; color: navy;">
-      <b>Content:</b> <span style="color: black;">"Dobby has no master. Dobby is a free elf! And Dobby has come to save Harry Potter and his friends. Every great wizard in history has started out as nothing more than we are now."</span>
-    </p>    
 
 </div>
 </body>
